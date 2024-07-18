@@ -1,7 +1,13 @@
 <html>
 <body>
-<a id="btn" href="#" onclick="window.open('https://www.google.com', '_system'); return false;">Continue here</a>
-<a id="btn2">not in app browser</a>
+<p><a id="btn" href="#" onclick="window.open('https://www.google.com', '_system'); return false;">Continue here</a>
+<p><a id="btn" href="#" onclick="window.open('https://www.google.com', '_blank'); return false;">Continue here</a>
+<p><a 
+  href="intent:https://www.google.com" 
+  target="_blank">
+  Open Browser
+</a>
+<p><a id="btn2">not in app browser</a>
 </body>
 </html>
 
@@ -15,7 +21,7 @@
             safari = /safari/.test(userAgent),
             ios = /iphone|ipod|ipad/.test(userAgent);
 			
-			
+			alert(safari);
 			safari=false;
 
         if (ios) {
