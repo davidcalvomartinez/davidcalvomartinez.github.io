@@ -14,6 +14,11 @@
             userAgent = window.navigator.userAgent.toLowerCase(),
             safari = /safari/.test(userAgent),
             ios = /iphone|ipod|ipad/.test(userAgent);
+			
+			alert(ios);
+			alert(standalone);
+			alert(safari);
+			alert(userAgent.includes('wv'));
 
         if (ios) {
 			
