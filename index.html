@@ -1,7 +1,7 @@
 <body style="margin:0px;padding:0px;overflow:hidden">
     --IFRAME--
     <script>
-            function getParams() {
+        function getParams() {
             var idx = document.URL.indexOf('?');
             var params = new Array();
             if (idx != -1) {
@@ -16,7 +16,9 @@
         
         params = getParams();
         token = unescape(params["token"]);
-        document.write("token = " + token + "<br>");
+        document.write("<iframe src='https://test.cetelem.es/eCommerceLite/order.htm?token=");
+        document.write(token);
+        document.write("' frameborder='0' style='overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:90%;width:90%;position:absolute;top:0px;left:0px;right:0px;bottom:0px' height='90%' width='90%'></iframe>");
     </script>
-    <iframe src="https://test.cetelem.es/eCommerceLite/order.htm?token=3754859254382" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:90%;width:90%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="90%" width="90%"></iframe>
+    <!--<iframe src="https://test.cetelem.es/eCommerceLite/order.htm?token=3754859254382" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:90%;width:90%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="90%" width="90%"></iframe>-->
 </body>
