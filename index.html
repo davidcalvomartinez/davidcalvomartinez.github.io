@@ -1,6 +1,23 @@
 <body style="margin:0px;padding:0px;overflow:hidden">
-    --IFRAME CON CAMERA--
+    --IFRAME CON CAMERA Y SCRIPT--
     <script>
+
+        window.addEventListener('bannerLoaded', function iniFrame() { 
+  if ( window.location !== window.parent.location ) 
+  {
+    console.log("The page IS in an iFrame")
+    // The page is in an iFrames 
+    alert("The page IS in an iFrame"); 
+    document.getElementById("onetrust-consent-sdk").style.display = "none";
+  }
+  else {
+    console.log("The page is NOT in an iFrame")
+    // The page is not in an iFrame 
+    alert("The page is NOT in an iFrame");
+  } 
+}, false);
+
+        
         function getParams() {
             var idx = document.URL.indexOf('?');
             var params = new Array();
